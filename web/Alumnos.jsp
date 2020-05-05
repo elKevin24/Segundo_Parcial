@@ -112,13 +112,12 @@
             <table border="1"   class="highlight responsive-table striped " >
                 <tr>
                     <td>No.</td>
-                    <td>Id_Alumno</td>
-                    <td>Apellido</td>
-                    <td>Segundo Apellido</td>
-                    <td>Nombre</td>
-                    <td>Segundo Nombre</td>
-                    <td>Tercer Nombre </td>                        
-
+                    <td>Id</td>
+                    <td>Lote</td>
+                    <td>Fecha</td>
+                    <td>Campo</td>
+                    <td>Calidad</td>
+                    <td>Variedad</td>                        
                     <td>Seccion</td>
 
                 </tr>
@@ -136,7 +135,7 @@
                         out.println("<td>" + lista.get(i).getCampo() + "</td>");
                         out.println("<td>" + lista.get(i).getCalidad()+ "</td>");
                         out.println("<td>" + lista.get(i).getVariedad()+ "</td>");
-                        out.println("<td>" + lista.get(i).getCalidad()+ "</td>");
+                        
                         out.println("<td>" + "<a class='waves-effect waves-light btn-small' onclick='return myFunction()' href=Editar.jsp?id=" + lista.get(i).getId() + ">" + "Editar" + "</a>" + "</td>");
                         out.println("<td>" + "<a class='waves-effect waves-light btn-small' onclick='return myFunction1()' href=Eliminar.jsp?id=" + lista.get(i).getId() + ">" + "<i class='material-icons'>delete_forever</i>" + "Eliminar" + "</a>" + "</td>");
 
