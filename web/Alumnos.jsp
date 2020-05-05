@@ -123,22 +123,22 @@
 
                 </tr>
                 <%
-                    LinkedList<BeanUsuario> lista = Usuario.consultarUsuario2(grado);
+                    LinkedList<BeanUsuario> lista = Usuario.consultarUsuario();
 
                     for (int i = 0; i < lista.size(); i++) {
 
                         int a = i + 1;
                         out.println("<tr>");
                         out.println("<td>" + a + "</td>");
-                        out.println("<td>" + lista.get(i).getId_alumno() + "</td>");
-                        out.println("<td>" + lista.get(i).getApellido() + "</td>");
-                        out.println("<td>" + lista.get(i).getSapellido() + "</td>");
-                        out.println("<td>" + lista.get(i).getNombre() + "</td>");
-                        out.println("<td>" + lista.get(i).getSnombre() + "</td>");
-                        out.println("<td>" + lista.get(i).getTnombre() + "</td>");
-                        out.println("<td>" + lista.get(i).getId_seccion() + "</td>");
-                        out.println("<td>" + "<a class='waves-effect waves-light btn-small' onclick='return myFunction()' href=Editar.jsp?id=" + lista.get(i).getId_alumno() + ">" + "Editar" + "</a>" + "</td>");
-                        out.println("<td>" + "<a class='waves-effect waves-light btn-small' onclick='return myFunction1()' href=Eliminar.jsp?id=" + lista.get(i).getId_alumno() + ">" + "<i class='material-icons'>delete_forever</i>" + "Eliminar" + "</a>" + "</td>");
+                       out.println("<td>" + lista.get(i).getId() + "</td>");
+                        out.println("<td>" + lista.get(i).getLote()+ "</td>");
+                        out.println("<td>" + lista.get(i).getFecha()+ "</td>");
+                        out.println("<td>" + lista.get(i).getCampo() + "</td>");
+                        out.println("<td>" + lista.get(i).getCalidad()+ "</td>");
+                        out.println("<td>" + lista.get(i).getVariedad()+ "</td>");
+                        out.println("<td>" + lista.get(i).getCalidad()+ "</td>");
+                        out.println("<td>" + "<a class='waves-effect waves-light btn-small' onclick='return myFunction()' href=Editar.jsp?id=" + lista.get(i).getId() + ">" + "Editar" + "</a>" + "</td>");
+                        out.println("<td>" + "<a class='waves-effect waves-light btn-small' onclick='return myFunction1()' href=Eliminar.jsp?id=" + lista.get(i).getId() + ">" + "<i class='material-icons'>delete_forever</i>" + "Eliminar" + "</a>" + "</td>");
 
                         out.println("</tr>");
                     }

@@ -2,120 +2,86 @@ package controlador;
 
 public class BeanUsuario {
 
-    public String getId_seccion() {
-        return id_seccion;
+    public String getId() {
+        return id;
     }
 
-    public void setId_seccion(String id_seccion) {
-        this.id_seccion = id_seccion;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getLote() {
+        return lote;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setLote(String lote) {
+        this.lote = lote;
     }
 
-    public String getSnombre() {
-        return snombre;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setSnombre(String snombre) {
-        this.snombre = snombre;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
-    public String getTnombre() {
-        return tnombre;
+    public String getCampo() {
+        return campo;
     }
 
-    public void setTnombre(String tnombre) {
-        this.tnombre = tnombre;
+    public void setCampo(String campo) {
+        this.campo = campo;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getCantidad() {
+        return cantidad;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setCantidad(String cantidad) {
+        this.cantidad = cantidad;
     }
 
-    public String getSapellido() {
-        return sapellido;
+    public String getVariedad() {
+        return variedad;
     }
 
-    public void setSapellido(String sapellido) {
-        this.sapellido = sapellido;
+    public void setVariedad(String variedad) {
+        this.variedad = variedad;
     }
 
-    public String getStatus() {
-        return status;
+    public String getCalidad() {
+        return calidad;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setCalidad(String calidad) {
+        this.calidad = calidad;
     }
 
-    public String getId_alumno() {
-        return id_alumno;
-    }
-
-    public void setId_alumno(String id_alumno) {
-        this.id_alumno = id_alumno;
-    }
-
-   
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getEncargado() {
-        return encargado;
-    }
-
-    public void setEncargado(String encargado) {
-        this.encargado = encargado;
-    }
+ 
 
 
 
-    public BeanUsuario(String nombre, String snombre, String tnombre, String apellido, String sapellido, String id_seccion) {
+    public BeanUsuario(String id, String lote, String fecha, String campo, String cantidad, String variedad, String calidad) {
         
-        this.nombre = nombre;
-        this.snombre = snombre;
-        this.tnombre = tnombre;
-        this.apellido = apellido;
-        this.sapellido = sapellido;
-        this.id_seccion = id_seccion;
+         this.id = id;
+        this.lote = lote;
+        this.fecha = fecha;
+        this.campo = campo;
+        this.cantidad = cantidad;
+        this.variedad = variedad;
+        this.calidad = calidad;
         
         
     }
 
-    private String id_seccion;
-    private String nombre;
-    private String snombre;
-    private String tnombre;
-    private String apellido;
-    private String sapellido;
-    private String status;
-    private String id_alumno;
-    private String encargado;
-    private String correo;
-    private String telefono; 
+     private String id;
+    private String lote;
+    private String fecha;
+    private String campo;
+    private String cantidad;
+    private String variedad;
+    private String calidad;
 
     public BeanUsuario() {
     }

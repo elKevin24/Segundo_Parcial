@@ -52,7 +52,7 @@
                                 <a class="collapsible-header">Alumnos<i class="material-icons">account_boxarrow_drop_down</i></a>
                                 <div class="collapsible-body">
                                     <ul>
-                                        <li><a href="newjsp.jsp">Ingreso</a></li>
+                                        <li><a href="Alumnos.jsp">Ingreso</a></li>
                                         <li><a href="Consulta.jsp">Consulta</a></li>
                                         <li><a href="Reporte.jsp">Rerpote</a></li>
                                     </ul>
