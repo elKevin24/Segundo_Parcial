@@ -62,9 +62,8 @@ public class BeanUsuario {
 
 
 
-    public BeanUsuario(String id, String lote, String fecha, String campo, String cantidad, String variedad, String calidad) {
+    public BeanUsuario(String lote, String fecha, String campo, String cantidad, String variedad, String calidad) {
         
-         this.id = id;
         this.lote = lote;
         this.fecha = fecha;
         this.campo = campo;

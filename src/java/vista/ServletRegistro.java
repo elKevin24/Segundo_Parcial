@@ -71,19 +71,19 @@ public class ServletRegistro extends HttpServlet {
         
         
      
-        String Nombre = request.getParameter("Nombre");
-        String Snombre = request.getParameter("Snombre");
-        String Tnombre = request.getParameter("Tnombre");
-        String Apellido = request.getParameter("Apellido");
-        String Sapellido = request.getParameter("Sapellido");
-        String Id_seccion = request.getParameter("Id_seccion");
+        String Lote = request.getParameter("Lote");
+        String Fecha = request.getParameter("Fecha");
+        String Campo = request.getParameter("Campo");
+        String Cantidad = request.getParameter("Cantidad");
+        String Variedad = request.getParameter("Variedad");
+        String Calidad = request.getParameter("Calidad");
         
         BeanUsuario busuario;
-        busuario = new BeanUsuario(Nombre, Snombre, Tnombre, Apellido, Sapellido, Id_seccion);
+        busuario = new BeanUsuario(Lote, Fecha, Campo, Cantidad,Variedad, Calidad);
         boolean sw = Usuario.agregarUsuario(busuario);
 
         PrintWriter out = response.getWriter();
-        out.println( Nombre + Snombre + Tnombre + Apellido + Sapellido + Id_seccion );
+        out.println( Lote+ Fecha+Cantidad+ Campo+Cantidad+Variedad+ Calidad );
 
         if (sw) {
             response.sendRedirect("Guardado.jsp");
