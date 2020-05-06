@@ -27,10 +27,10 @@
 <form action="mostrar.jsp" method="get">
 <table>
 <tr>
-<td colspan="2" align="center">Consultar Usuario</td>
+<td colspan="2" align="center">Consultar </td>
 </tr>
 <tr>
-<td>Usuario: </td>
+<td>Lote </td>
 <td><input type="text" size="15" name="usuario"></td>
 </tr>
 <tr>
