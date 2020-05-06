@@ -49,48 +49,16 @@
                         <li><a class="subheader">Registro</a></li>
                         <ul class="collapsible collapsible-accordion">
                             <li>
-                                <a class="collapsible-header">Alumnos<i class="material-icons">account_boxarrow_drop_down</i></a>
+                                <a class="collapsible-header">Cafe<i class="material-icons">account_boxarrow_drop_down</i></a>
                                 <div class="collapsible-body">
                                     <ul>
                                         <li><a href="Alumnos.jsp">Ingreso</a></li>
                                         <li><a href="Consulta.jsp">Consulta</a></li>
-                                        <li><a href="Reporte.jsp">Rerpote</a></li>
+                                       
                                     </ul>
                                 </div>
-                            </li>
-                            <li>
-                                <a class="collapsible-header">Cursos<i class="material-icons">collections_bookmark</i></a>
-                                <div class="collapsible-body">
-                                    <ul>
-
-                                        <li><a href="Cursos.jsp">Ingreso</a></li>
-
-
-
-
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a class="collapsible-header">Notas<i class="material-icons">people</i></a>
-                                <div class="collapsible-body">
-                                    <ul>
-                                        <li><a href="Notas.jsp">Ingreso V1</a></li>
-                                        <li><a href="select_notas.jsp">Ingreso</a></li>
-
-                                    </ul>
-                                </div>
-                            </li>
-                             <li><a class="collapsible-header">Premios<i class="material-icons">star_border</i></a>
-                                <div class="collapsible-body">
-                                    <ul>
-                                        <li><a href="ward.jsp">Gafetes</a></li>
-                                        
-
-                                    </ul>
-                                </div>
-                            </li>
-
-
+                            </li>                           
+                          
                         </ul>
 
                     </ul>

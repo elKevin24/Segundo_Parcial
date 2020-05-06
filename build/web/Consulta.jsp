@@ -23,21 +23,23 @@
 <title>Insert title here</title>
 </head>
 <body>
+    <div class="container">
+        <!-- Page Content goes here -->
+    
 <div align="center">
 <form action="mostrar.jsp" method="get">
-<table>
-<tr>
-<td colspan="2" align="center">Consultar </td>
-</tr>
-<tr>
-<td>Lote </td>
-<td><input type="text" size="15" name="usuario"></td>
-</tr>
-<tr>
+
+    
+    <div class="input-field col s6">
+          <input placeholder="Escriba numero de lote" id="first_name" type="text" class="validate" name="usuario">
+          <label for="Consultar lote">Consultar lote</label>
+        </div>
+
 <td colspan="2" align="center"><input type="submit" value="Consultar"></td>
 </tr>
 </table>
 </form>
 </div>
+          </div>
 </body>
 </html>
