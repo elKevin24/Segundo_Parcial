@@ -46,6 +46,44 @@ public static LinkedList<BeanUsuario> consultarUsuario() throws SQLException
     return usuarios;
 }            
 
+
+     
+
+
+public static LinkedList<BeanUsuario> consultarUsuarioLike(String Lote) throws SQLException
+{
+     LinkedList<BeanUsuario> usuarios = new LinkedList<>();
+            int Lt = Integer.valueOf(Lote);
+    try
+      {
+            Conexion c=new Conexion();
+         try (Connection con = c.getConexion()) {
+             Statement st;
+             st = con.createStatement();
+                try (ResultSet rs = st.executeQuery("SELECT * FROM Coffe WHERE lote = "+Lt+"" )) {
+                    while (rs.next())
+                    {
+                        BeanUsuario user = new BeanUsuario();
+                        user.setId(rs.getString("id"));       
+                        user.setLote(rs.getString("lote"));             
+                        user.setFecha(rs.getString("fecha"));   
+                        user.setCampo(rs.getString("campo"));
+                        user.setCantidad(rs.getString("cantidad"));         
+                        user.setVariedad(rs.getString("variedad"));       
+                        user.setCalidad(rs.getString("calidad"));     
+                                                                            
+                        usuarios.add(user);                                 
+                    }  }
+             st.close();
+         }                    
+      }                        
+     catch (SQLException e)
+      {                                                            
+      }                     
+                             
+    return usuarios;
+}            
+
                            
 public static boolean ActualizarUsuario(BeanUsuario usuario)
 {                                   

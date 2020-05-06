@@ -33,13 +33,13 @@
            boolean res=false;
            if(id.length()>0)
            {
-               res= Usuario.CambiarEstado(id);
+               res= Usuario.eliminarUsuario(id);
            }
    
            if(res==true)
            {
             out.println("<script> alert('Registro  eliminado')</script>");
-              response.sendRedirect("http://localhost:8084/Registro/Alumnos.jsp");
+              response.sendRedirect("http://localhost:8084/registroalumnoslc/Alumnos.jsp");
                
            }
            else

@@ -1,26 +1,13 @@
-<%@page import="modelo.Seccioon"%>
-<%@page import="controlador.BeanSeccion"%>
-<%@page import="modelo.Grados"%>
-<%@page import="controlador.BeanGrados"%>
-
-<%-- 
-    Document   : INICIAL
-    Created on : 12/05/2018, 05:05:19 PM
-    Author     : busqu
---%>
-
-
-<%@page import="modelo.Usuarios"%>
-<%@page import="controlador.BeanUsuarios"%>
-<%@page import="java.util.*"%>
 <%@page import="modelo.Usuario"%>
+<%@page import="java.util.LinkedList"%>
 <%@page import="controlador.BeanUsuario"%>
-<%@page import="vista.ServletRegistro"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
-    <head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<head>
 
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
@@ -36,68 +23,10 @@
 
             <title>Registro</title>
         </head>
-        <body>
-
-        <%
-
-           
-
-            out.println("<h4>Registro de Cafe </h4>");
-
-
-        %>
-
-
-        <div class="col s12">
-
-            <a  href="grados.jsp" class="btn-floating pulse" ><i class="material-icons">arrow_back</i></a>
-
-        </div>
-        <form action="ServletRegistro.do" method="post" >
-            <div class="row">
-                <div class="col s12">
-
-                    <div class="input-field col s3">
-                        <input type="text" size="20" name="Lote">
-                        <label for="Lote"> Lote</label>
-                    </div>
-                    <div class="input-field col s3">
-                        <input type="text" size="20" name="Fecha">
-                        <label for="Fecha">Fecha</label>
-                    </div>
-                    <div class="input-field col s3">
-                        <input type="text" size="20" name="Campo">
-                        <label for="Campo">Campo</label>
-                    </div>
-                    <div class="input-field col s3">
-                        <input type="text" size="20" name="Cantidad">
-                        <label for="Cantidad">Cantidad</label>
-                    </div>
-                    <div class="input-field col s3">
-                        <input type="text" size="20" name="Variedad">
-                        <label for="Variedad">Variedad</label>
-                    </div>
-                    <div class=" input-field col s1">
-                        <input type="text" size="20" name="Calidad">
-                        <label for="Calidad">Calidad</label>
-                        
-                    </div>
-                    <div class="input-field col s3">
-                        <input type="submit" value="Registrar" class="btn-large" name="enviar">
-
-                    </div>
-                </div>
-                <div class="col s6">
-                    <div class="col s6 offset-s3">
-
-                    </div>
-                </div>
-
-            </div>
-        </form>
-
-
-        <div class="col s12">
+<title>Consulta Usuario</title>
+</head>
+<body>
+ <div class="col s12">
 
             <table border="1"   class="highlight responsive-table striped " >
                 <tr>
@@ -113,9 +42,11 @@
                     
                 </tr>
                 <%
+                    
+                    String id = request.getParameter("usuario");
                     int  Lote = 2;
                     String b = String.valueOf(Lote);
-                    LinkedList<BeanUsuario> lista = Usuario.consultarUsuario();
+                    LinkedList<BeanUsuario> lista = Usuario.consultarUsuarioLike(id);
 
                     for (int i = 0; i < lista.size(); i++) {
 
@@ -138,7 +69,5 @@
                 %>  
 
         </div>
-
-
-    </body>
+</body>
 </html>

@@ -113,6 +113,8 @@
                     
                 </tr>
                 <%
+                    int  Lote = 2;
+                    String b = String.valueOf(Lote);
                     LinkedList<BeanUsuario> lista = Usuario.consultarUsuario();
 
                     for (int i = 0; i < lista.size(); i++) {
