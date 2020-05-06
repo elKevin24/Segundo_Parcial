@@ -40,20 +40,9 @@
 
         <%
 
-            String formParameter = request.getParameter("grado");
-            if (formParameter == null) {
+           
 
-            } else {
-
-                session.setMaxInactiveInterval(1000 * 5); // 5 minutes
-                session.setAttribute("Id_grado", formParameter);
-
-            }
-            String grado = String.valueOf(session.getAttribute("Id_grado"));
-            BeanSeccion user = new BeanSeccion();
-            user = Seccioon.ObtenerSeccion(grado);
-
-            out.println("<h4>Registro de Alumnos " + user.getGrado() + " Seccion " + user.getSeccion() + "</h4>");
+            out.println("<h4>Registro de Cafe </h4>");
 
 
         %>
@@ -69,28 +58,29 @@
                 <div class="col s12">
 
                     <div class="input-field col s3">
-                        <input type="text" size="20" name="Nombre">
-                        <label for="Nombre"> Nombre</label>
+                        <input type="text" size="20" name="Lote">
+                        <label for="Lote"> Lote</label>
                     </div>
                     <div class="input-field col s3">
-                        <input type="text" size="20" name="Snombre">
-                        <label for="Snombre">Segundo Nombre</label>
+                        <input type="text" size="20" name="Fecha">
+                        <label for="Fecha">Fecha</label>
                     </div>
                     <div class="input-field col s3">
-                        <input type="text" size="20" name="Tnombre">
-                        <label for="Tnombre">Tercer Nombre</label>
+                        <input type="text" size="20" name="Campo">
+                        <label for="Campo">Campo</label>
                     </div>
                     <div class="input-field col s3">
-                        <input type="text" size="20" name="Apellido">
-                        <label for="Apellido">Apellido</label>
+                        <input type="text" size="20" name="Cantidad">
+                        <label for="Cantidad">Cantidad</label>
                     </div>
                     <div class="input-field col s3">
-                        <input type="text" size="20" name="Sapellido">
-                        <label for="Sapellido">Segundo Apellido</label>
+                        <input type="text" size="20" name="Variedad">
+                        <label for="Variedad">Variedad</label>
                     </div>
                     <div class=" input-field col s1">
-                        <input  type="text" size="20" name="Id_seccion" value="<%=grado%>"
-                                <label for="Id_seccion">Codigo grado</label>
+                        <input type="text" size="20" name="Calidad">
+                        <label for="Calidad">Calidad</label>
+                        
                     </div>
                     <div class="input-field col s3">
                         <input type="submit" value="Registrar" class="btn-large" name="enviar">
@@ -116,10 +106,11 @@
                     <td>Lote</td>
                     <td>Fecha</td>
                     <td>Campo</td>
-                    <td>Calidad</td>
-                    <td>Variedad</td>                        
-                    <td>Seccion</td>
-
+                    <td>Cantidad</td>
+                    <td>Variedad</td>         
+                    <td>Calidad Porcentaje</td>
+                                  
+                    
                 </tr>
                 <%
                     LinkedList<BeanUsuario> lista = Usuario.consultarUsuario();
@@ -129,12 +120,13 @@
                         int a = i + 1;
                         out.println("<tr>");
                         out.println("<td>" + a + "</td>");
-                       out.println("<td>" + lista.get(i).getId() + "</td>");
+                        out.println("<td>" + lista.get(i).getId() + "</td>");
                         out.println("<td>" + lista.get(i).getLote()+ "</td>");
                         out.println("<td>" + lista.get(i).getFecha()+ "</td>");
                         out.println("<td>" + lista.get(i).getCampo() + "</td>");
-                        out.println("<td>" + lista.get(i).getCalidad()+ "</td>");
+                        out.println("<td>" + lista.get(i).getCantidad()+ "</td>");
                         out.println("<td>" + lista.get(i).getVariedad()+ "</td>");
+                        out.println("<td>" + lista.get(i).getCalidad()+ "%</td>");
                         
                         out.println("<td>" + "<a class='waves-effect waves-light btn-small' onclick='return myFunction()' href=Editar.jsp?id=" + lista.get(i).getId() + ">" + "Editar" + "</a>" + "</td>");
                         out.println("<td>" + "<a class='waves-effect waves-light btn-small' onclick='return myFunction1()' href=Eliminar.jsp?id=" + lista.get(i).getId() + ">" + "<i class='material-icons'>delete_forever</i>" + "Eliminar" + "</a>" + "</td>");
