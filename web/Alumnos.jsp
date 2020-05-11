@@ -1,8 +1,3 @@
-<%@page import="modelo.Seccioon"%>
-<%@page import="controlador.BeanSeccion"%>
-<%@page import="modelo.Grados"%>
-<%@page import="controlador.BeanGrados"%>
-
 <%-- 
     Document   : INICIAL
     Created on : 12/05/2018, 05:05:19 PM
@@ -10,8 +5,7 @@
 --%>
 
 
-<%@page import="modelo.Usuarios"%>
-<%@page import="controlador.BeanUsuarios"%>
+
 <%@page import="java.util.*"%>
 <%@page import="modelo.Usuario"%>
 <%@page import="controlador.BeanUsuario"%>
